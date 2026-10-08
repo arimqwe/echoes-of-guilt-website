@@ -15,14 +15,11 @@
 </head>
 <body>
   <div class="page-wrapper">
-    
-    <!-- ЛЕВАЯ ПАНЕЛЬ С ИЗОБРАЖЕНИЯМИ -->
     <aside class="side-panel side-left">
       <div class="panel-image panel-1"></div>
       <div class="panel-image panel-2"></div>
     </aside>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
     <main class="main-content">
       <header class="topbar">
         <nav class="nav container">
@@ -30,12 +27,11 @@
           <div class="nav-links">
             <a href="#plot">Сюжет</a>
             <a href="#characters">Герои</a>
-            <a href="#faq">О игре</a>
+            <a href="#supporting">Окружение</a>
           </div>
         </nav>
       </header>
 
-      <!-- ГЕРОЙ СЕКЦИЯ -->
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-copy">
@@ -53,7 +49,6 @@
         </div>
       </section>
 
-      <!-- СЮЖЕТ СЕКЦИЯ -->
       <section class="plot-section section" id="plot">
         <div class="container">
           <div class="section-heading">
@@ -68,7 +63,7 @@
                 После ночи, где сошлись страх, горечь и давно спрятанная правда, каждый герой выбрал свою форму вины.
               </p>
               <p>
-                Феликс не успел защитить семью и теперь держит сестру так крепко, что она не может дышать. Фелиция решает, что виновата во всём и наказывает себя жестокостью. Кэтрин хранит молчание и любовь, которую никто не просил.
+                Феликс не успел защитить семью и теперь держит сестру так крепко, что она не может дышать. Фелиция считает себя виноватой во всём и притворяется, что не боится. Кэтрин хранит молчание и любовь, которую никто не просил.
               </p>
               <p>
                 Слова ранят сильнее ножа. Споры из-за пустяков превращаются в трагедию. Примирись со своими демонами или позволь чувству вины уничтожить всё, что осталось.
@@ -79,7 +74,6 @@
         </div>
       </section>
 
-      <!-- ПЕРСОНАЖИ СЕКЦИЯ -->
       <section class="chars-section section" id="characters">
         <div class="container">
           <div class="section-heading centered">
@@ -88,7 +82,6 @@
           </div>
 
           <div class="char-grid">
-            <!-- ФЕЛИКС -->
             <article class="char-card">
               <div class="char-header">
                 <div>
@@ -106,10 +99,9 @@
                 сгорая от стыда и усталости на двух работах.
               </p>
 
-              <a href="#felix-wiki" class="btn btn-secondary" onclick="goToWiki('felix')">Перейти на профиль</a>
+              <button class="btn btn-secondary" data-character="felix">Перейти на профиль</button>
             </article>
 
-            <!-- ФЕЛИЦИЯ -->
             <article class="char-card">
               <div class="char-header">
                 <div>
@@ -127,10 +119,9 @@
                 и частой сменой сомнительных компаний.
               </p>
 
-              <a href="#felicia-wiki" class="btn btn-secondary" onclick="goToWiki('felicia')">Перейти на профиль</a>
+              <button class="btn btn-secondary" data-character="felicia">Перейти на профиль</button>
             </article>
 
-            <!-- КЭТРИН -->
             <article class="char-card">
               <div class="char-header">
                 <div>
@@ -148,13 +139,65 @@
                 и проявляет материнскую заботу к строптивой Фелиции.
               </p>
 
-              <a href="#cathrine-wiki" class="btn btn-secondary" onclick="goToWiki('cathrine')">Перейти на профиль</a>
+              <button class="btn btn-secondary" data-character="kathrine">Перейти на профиль</button>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- О ИГРЕ -->
+      <section class="chars-section section" id="supporting">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Окружение</p>
+            <h2>Другие персонажи</h2>
+          </div>
+
+          <div class="crowd-grid">
+            <article class="crowd-card">
+              <div class="crowd-name">Белла «Кошечка»</div>
+              <div class="crowd-meta">18 лет | 173 см</div>
+              <button class="btn btn-secondary" data-character="bella">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Дерик «Чмырь»</div>
+              <div class="crowd-meta">Нрлщик | 191 см</div>
+              <button class="btn btn-secondary" data-character="derik">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Саймон Грей</div>
+              <div class="crowd-meta">Хакер | 187 см</div>
+              <button class="btn btn-secondary" data-character="simon">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Кики</div>
+              <div class="crowd-meta">Рост 163 см</div>
+              <button class="btn btn-secondary" data-character="kiki">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Ведьма</div>
+              <div class="crowd-meta">Рост 170 см</div>
+              <button class="btn btn-secondary" data-character="witch">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Лолита</div>
+              <div class="crowd-meta">Рост 166 см</div>
+              <button class="btn btn-secondary" data-character="lolita">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Комар</div>
+              <div class="crowd-meta">Рост 185 см</div>
+              <button class="btn btn-secondary" data-character="komar">Перейти на профиль</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="faq-section section" id="faq">
         <div class="container">
           <div class="section-heading centered">
@@ -186,20 +229,22 @@
       </footer>
     </main>
 
-    <!-- ПРАВАЯ ПАНЕЛЬ С ИЗОБРАЖЕНИЯМИ -->
     <aside class="side-panel side-right">
       <div class="panel-image panel-3"></div>
     </aside>
-
   </div>
 
-  <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ВИКИ ПЕРСОНАЖЕЙ -->
   <div class="wiki-modal" id="wikiModal">
     <div class="wiki-modal-content">
       <button class="wiki-close" onclick="closeWiki()">&times;</button>
-      
       <div class="wiki-container" id="wikiContainer">
-        <!-- Контент подгружается динамически -->
+        <h3 id="wikiTitle">Профиль персонажа</h3>
+        <p id="wikiText">Здесь будет краткая биография и описание мотивации персонажа.</p>
+        <div class="wiki-badges">
+          <span id="badge1">Возраст</span>
+          <span id="badge2">Рост</span>
+          <span id="badge3">Мотив</span>
+        </div>
       </div>
     </div>
   </div>
