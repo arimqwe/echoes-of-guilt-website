@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lonely Souls — Официальный сайт</title>
+  <meta
+    name="description"
+    content="Официальный сайт интерактивной драмы Lonely Souls — герои, сюжет и атмосфера мира."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    
+    <!-- ЛЕВАЯ ПАНЕЛЬ С ИЗОБРАЖЕНИЯМИ -->
+    <aside class="side-panel side-left">
+      <div class="panel-image panel-1"></div>
+      <div class="panel-image panel-2"></div>
+    </aside>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="main-content">
+      <header class="topbar">
+        <nav class="nav container">
+          <div class="logo">Lonely Souls</div>
+          <div class="nav-links">
+            <a href="#plot">Сюжет</a>
+            <a href="#characters">Герои</a>
+            <a href="#faq">О игре</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- ГЕРОЙ СЕКЦИЯ -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Интерактивная драма</p>
+            <h1>Lonely Souls</h1>
+            <p class="subtitle">В шоколадно-багровых тонах</p>
+            <p class="lead">
+              Слова ранят сильнее ножа. Споры из-за пустяков превращаются в трагедию на тёмной ночной автостраде.
+              Примирись со своими демонами или позволь чувству вины уничтожить всё, что осталось.
+            </p>
+            <div class="hero-actions">
+              <a href="#plot" class="btn btn-primary">Начать историю</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЮЖЕТ СЕКЦИЯ -->
+      <section class="plot-section section" id="plot">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">История</p>
+            <h2>Сюжет</h2>
+          </div>
+
+          <div class="plot-box">
+            <div class="plot-text">
+              <h3>Хроника Хиллсов: 18.10.20ХХ</h3>
+              <p>
+                После ночи, где сошлись страх, горечь и давно спрятанная правда, каждый герой выбрал свою форму вины.
+              </p>
+              <p>
+                Феликс не успел защитить семью и теперь держит сестру так крепко, что она не может дышать. Фелиция решает, что виновата во всём и наказывает себя жестокостью. Кэтрин хранит молчание и любовь, которую никто не просил.
+              </p>
+              <p>
+                Слова ранят сильнее ножа. Споры из-за пустяков превращаются в трагедию. Примирись со своими демонами или позволь чувству вины уничтожить всё, что осталось.
+              </p>
+              <a href="#characters" class="btn btn-primary">Перейти к началу истории</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПЕРСОНАЖИ СЕКЦИЯ -->
+      <section class="chars-section section" id="characters">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Персонажи</p>
+            <h2>Герои</h2>
+          </div>
+
+          <div class="char-grid">
+            <!-- ФЕЛИКС -->
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Феликс Хиллс</h3>
+                  <p class="char-quote">«Вы не видели Фелю?»</p>
+                </div>
+                <div class="char-meta">
+                  <span>20 лет</span>
+                  <span>Рост: 177 см</span>
+                </div>
+              </div>
+
+              <p class="char-bio">
+                Вспыльчивый, но пытающийся выглядеть хладнокровным. Защищает сестру от внешнего мира и органов опеки,
+                сгорая от стыда и усталости на двух работах.
+              </p>
+
+              <a href="#felix-wiki" class="btn btn-secondary" onclick="goToWiki('felix')">Перейти на профиль</a>
+            </article>
+
+            <!-- ФЕЛИЦИЯ -->
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Фелиция Хиллс</h3>
+                  <p class="char-quote">«Я здесь, болван»</p>
+                </div>
+                <div class="char-meta">
+                  <span>16 лет</span>
+                  <span>Рост: 168 см</span>
+                </div>
+              </div>
+
+              <p class="char-bio">
+                Школьная стерва «Лупоглазка». Маскирует душевную боль вызывающим поведением, грубостью
+                и частой сменой сомнительных компаний.
+              </p>
+
+              <a href="#felicia-wiki" class="btn btn-secondary" onclick="goToWiki('felicia')">Перейти на профиль</a>
+            </article>
+
+            <!-- КЭТРИН -->
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Кэтрин Лицкая</h3>
+                  <p class="char-quote">«Все хорошо?»</p>
+                </div>
+                <div class="char-meta">
+                  <span>20 лет</span>
+                  <span>Рост: 159 см</span>
+                </div>
+              </div>
+
+              <p class="char-bio">
+                Преданная подруга из того же детдома. Обеспечена, бескорыстна, тайно влюблена в Феликса
+                и проявляет материнскую заботу к строптивой Фелиции.
+              </p>
+
+              <a href="#cathrine-wiki" class="btn btn-secondary" onclick="goToWiki('cathrine')">Перейти на профиль</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- О ИГРЕ -->
+      <section class="faq-section section" id="faq">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Информация</p>
+            <h2>О игре</h2>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-card">
+              <h3>Жанр</h3>
+              <p>Интерактивная психологическая драма в шоколадно-багровых тонах</p>
+            </div>
+            <div class="faq-card">
+              <h3>Разработчик</h3>
+              <p>Lonely Souls Studio</p>
+            </div>
+            <div class="faq-card">
+              <h3>Платформы</h3>
+              <p>ПК, мобильные устройства</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© 2026 Lonely Souls Studio. По мотивам хроники Хиллсов.</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ПРАВАЯ ПАНЕЛЬ С ИЗОБРАЖЕНИЯМИ -->
+    <aside class="side-panel side-right">
+      <div class="panel-image panel-3"></div>
+    </aside>
+
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ВИКИ ПЕРСОНАЖЕЙ -->
+  <div class="wiki-modal" id="wikiModal">
+    <div class="wiki-modal-content">
+      <button class="wiki-close" onclick="closeWiki()">&times;</button>
+      
+      <div class="wiki-container" id="wikiContainer">
+        <!-- Контент подгружается динамически -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
