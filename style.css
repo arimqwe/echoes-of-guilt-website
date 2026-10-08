@@ -1,277 +1,431 @@
-body {
-  margin: 0;
-  background: #9b0f1b;
-  color: #f4e5d0;
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lonely Souls — Официальный сайт</title>
+  <meta
+    name="description"
+    content="Официальный сайт интерактивной драмы Lonely Souls — герои, сюжет и атмосфера мира."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="side-panel side-left">
+      <div class="panel-image panel-1"></div>
+      <div class="panel-image panel-2"></div>
+    </aside>
 
-* {
-  box-sizing: border-box;
-}
+    <main class="main-content">
+      <header class="topbar">
+        <nav class="nav container">
+          <div class="logo">Lonely Souls</div>
+          <div class="nav-links">
+            <a href="#plot">Сюжет</a>
+            <a href="#characters">Герои</a>
+            <a href="#supporting">Окружение</a>
+          </div>
+        </nav>
+      </header>
 
-html {
-  scroll-behavior: smooth;
-}
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Интерактивная драма</p>
+            <h1>Lonely Souls</h1>
+            <p class="subtitle">В шоколадно-багровых тонах</p>
+            <p class="lead">
+              Слова ранят сильнее ножа. Споры из-за пустяков превращаются в трагедию на тёмной ночной автостраде.
+              Примирись со своими демонами или позволь чувству вины уничтожить всё, что осталось.
+            </p>
+            <div class="hero-actions">
+              <a href="#plot" class="btn btn-primary">Начать историю</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+      <section class="plot-section section" id="plot">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">История</p>
+            <h2>Сюжет</h2>
+          </div>
 
-.page-shell {
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+          <div class="plot-box">
+            <div class="plot-text">
+              <h3>Авария</h3>
+              <p class="story-date">18.10.20ХХ</p>
 
-.floating-block {
-  position: fixed;
-  width: 190px;
-  height: 190px;
-  background: #cfe0ea;
-  z-index: 1;
-  left: 40px;
-  opacity: 0.9;
-}
+              <p class="story-scene">(Отец за рулем, мать рядом, а Феликс (13) и Фелиция (9) на задних сидениях.)</p>
 
-.left-top { top: 80px; }
-.left-mid { top: 505px; }
-.left-bottom { top: 930px; }
+              <p>«Было темно, за окном мелькали огни чужих фар, а по радио тихо играла популярная мелодия.»</p>
+              <p>«Родители любили ездить домой по долгим маршрутам, чтобы провести время в кругу семьи.»</p>
+              <p>«Я заткнул уши наушниками, залипая в телефон.»</p>
+              <p>«Но вдруг моя младшая сестра выдернула наушник из моего правого уха, нарушая покой.»</p>
 
-.right-top {
-  left: auto;
-  right: 40px;
-  top: 80px;
-}
+              <p><strong>Фелиция:</strong> Отдай мне зарядку. Мой планшет сел.</p>
+              <p><strong>Феликс:</strong> Отвали.</p>
+              <p><strong>Фелиция:</strong> Ты ее уже в школу брал, а мне сейчас надо!</p>
+              <p><strong>Феликс:</strong> Тебе ничего не надо. У тебя планшет сдох, потому что ты сутками в нем сидишь.</p>
+              <p><strong>Фелиция:</strong> Отдай, я сказала!</p>
+              <p>«Фелиция капризно надула губки, хмурясь, а потом и вовсе по-детски пнула меня ногой.»</p>
 
-.right-mid {
-  left: auto;
-  right: 40px;
-  top: 505px;
-}
+              <p><strong>Феликс:</strong> Еще раз пнешь – получишь.</p>
+              <p><strong>Фелиция:</strong> Мам! Он мне зарядку не отдает!</p>
+              <p>«Со стороны мамы послышался характерный тяжелый вздох. Мы постоянно ссорились.»</p>
 
-.main-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 30px 20px 100px;
-}
+              <p><strong>Мама:</strong> Феликс, отдай сестре зарядку.</p>
+              <p><strong>Феликс:</strong> Это моя зарядка!</p>
+              <p><strong>Фелиция:</strong> Тебе жалко что ли? Она общая!</p>
+              <p><strong>Феликс:</strong> Она не общая, она моя! Ты свою потеряла.</p>
 
-.hero-panel {
-  margin: 0 auto;
-  width: min(100%, 860px);
-  min-height: 660px;
-  background: rgba(41, 20, 14, 0.97);
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.24);
-  position: relative;
-  padding: 28px 28px 40px;
-}
+              <p><strong>Папа:</strong> Перестаньте… Нам осталось немного проехать.</p>
+              <p>«Фелиция возмущенно распахнула рот, когда папочка не встал на её сторону.»</p>
 
-.hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(4rem, 7vw, 8rem);
-  line-height: 0.9;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #f0dfbf;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
+              <p><strong>Фелиция:</strong> Он первый начал!</p>
+              <p><strong>Феликс:</strong> Я ничего не начинал, это ты пинаешься!</p>
+              <p><strong>Фелиция:</strong> А ты жадный!</p>
+              <p><strong>Феликс:</strong> А ты тупая!</p>
 
-.signature {
-  width: 100%;
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Segoe Print', 'Bradley Hand', cursive;
-  font-size: clamp(5rem, 10vw, 10rem);
-  color: rgba(219, 207, 192, 0.7);
-  text-align: center;
-  line-height: 1;
-  margin-top: 30px;
-  transform: rotate(-0.5deg);
-  user-select: none;
-}
+              <p><strong>Мама:</strong> Феликс! Не смей так разговаривать с сестрой.</p>
+              <p>«Мама повернулась к нам, хмурясь.»</p>
 
-.section {
-  max-width: 1040px;
-  margin: 90px auto 0;
-  padding: 0 20px;
-}
+              <p><strong>Папа:</strong> Вы можете хоть раз в жизни…</p>
+              <p>«Папа тоже повернулся, последовав примеру мамы.»</p>
+              <p>«Но в следующий момент я увидел ослепительный свет.»</p>
+              <p>«Фары встречной машины.»</p>
 
-.story-block {
-  background: rgba(31, 18, 13, 0.9);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  padding: 38px 42px 30px;
-  width: min(100%, 900px);
-  margin: 0 auto;
-}
+              <p>визг тормозов, удар, звон стекла. Все резко обрывается, черный</p>
 
-.story-block h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 20px;
-  color: #f0dfbf;
-}
+              <p><strong>Феликс:</strong> Что…?</p>
+              <p>«Папа и мама были без сознания.»</p>
+              <p>«Кажется, что кусок стекла задел мое лицо.»</p>
 
-.story-block p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #f1e6db;
-  margin-bottom: 18px;
-}
+              <p><strong>Феликс:</strong> Пап… мам…?</p>
+              <p>«Тело трясло. Абсолютно все мои конечности болели так, будто меня придавило огромной плитой.»</p>
+              <p>«Я отстегнул ремень и резко открыл дверь, вытаскивая отключившуюся Фелицию из машины.»</p>
+              <p>«Я прижал её хрупкое тело к себе, аккуратно придерживая голову.»</p>
 
-.btn-wrap {
-  margin-top: 18px;
-  display: flex;
-  justify-content: flex-start;
-}
+              <p><strong>Феликс:</strong> Фель, нет, не нужно…</p>
+              <p>«Она дышала, но я начал судорожно трясти её, осев на асфальте.»</p>
+              <p>«Вдруг она проснулась.»</p>
 
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 22px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-  color: #f4e5d0;
-  font-weight: 600;
-  transition: 0.2s ease;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-}
+              <p><strong>Фелиция:</strong> Феликс…?</p>
+              <p>«В следующий момент её милое лицо было искажено животным страхом и яростью.»</p>
 
-.cta-btn:hover {
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.08);
-}
+              <p>(Теперь экран проясняется, видно машину разбитую на заднем фоне)</p>
 
-.characters {
-  margin-top: 90px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
+              <p><strong>Феликс:</strong> Стой здесь. Не двигайся.</p>
+              <p><strong>Фелиция:</strong> Куда ты?!</p>
+              <p><strong>Феликс:</strong> Там родители.</p>
+              <p><strong>Фелиция:</strong> Это ты виноват! Ты начал! Ты! Из-за тебя все это произошло!</p>
+              <p>«По её лицу потекли слезы.»</p>
+              <p>«Я вдруг почувствовал как невероятная злость разливается по всему моему телу.»</p>
 
-.char-card {
-  background: rgba(31, 18, 13, 0.9);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 24px 22px 18px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
+              <p><strong>Феликс:</strong> Ты издеваешься?!</p>
+              <p><strong>Фелиция:</strong> Ты! Ты виноват! Если бы ты не спорил, они бы не отвернулись!</p>
+              <p><strong>Феликс:</strong> Да пошла ты!</p>
+              <p>«Я оттолкнул её и она упала на асфальт, дрожа от страха.»</p>
 
-.char-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  margin-bottom: 10px;
-  color: #f0dfbf;
-}
+              <p>(Глухой хлопок и взрыв. крик Фелиции и экран вновь становится черным, мигалки скорой помощи.)</p>
 
-.char-quote {
-  color: #cfe0ea;
-  font-style: italic;
-  margin-bottom: 18px;
-  font-size: 0.95rem;
-}
+              <a href="#characters" class="btn btn-primary">Перейти к началу истории</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-.char-bio {
-  color: #f1e6db;
-  line-height: 1.7;
-  margin-bottom: 22px;
-  font-size: 0.98rem;
-}
+      <section class="chars-section section" id="characters">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Персонажи</p>
+            <h2>Герои</h2>
+          </div>
 
-.wiki-panel {
-  display: none;
-  max-width: 980px;
-  margin: 70px auto 0;
-  background: rgba(29, 20, 17, 0.96);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 30px 32px 26px;
-  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
-}
+          <div class="char-grid">
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Феликс Хиллс</h3>
+                  <p class="char-quote">«Вы не видели Фелю?»</p>
+                </div>
+                <div class="char-meta">
+                  <span>20 лет</span>
+                  <span>Рост: 177 см</span>
+                </div>
+              </div>
 
-.wiki-panel.active {
-  display: block;
-}
+              <p class="char-bio">
+                Вспыльчивый, но пытающийся выглядеть хладнокровным. Защищает сестру от внешнего мира и органов опеки,
+                сгорая от стыда и усталости на двух работах.
+              </p>
 
-.wiki-panel h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
-  color: #f0dfbf;
-  margin-bottom: 18px;
-}
+              <button class="btn btn-secondary" data-character="felix">Перейти на профиль</button>
+            </article>
 
-.wiki-panel p {
-  color: #f2e8dc;
-  line-height: 1.85;
-  margin-bottom: 14px;
-}
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Фелиция Хиллс</h3>
+                  <p class="char-quote">«Я здесь, болван»</p>
+                </div>
+                <div class="char-meta">
+                  <span>16 лет</span>
+                  <span>Рост: 168 см</span>
+                </div>
+              </div>
 
-.wiki-badges {
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+              <p class="char-bio">
+                Школьная стерва «Лупоглазка». Маскирует душевную боль вызывающим поведением, грубостью
+                и частой сменой сомнительных компаний.
+              </p>
 
-.wiki-badges span {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 8px 12px;
-  border-radius: 999px;
-  color: #cfe0ea;
-  font-size: 0.82rem;
-}
+              <button class="btn btn-secondary" data-character="felicia">Перейти на профиль</button>
+            </article>
 
-@media (max-width: 980px) {
-  .floating-block {
-    display: none;
-  }
+            <article class="char-card">
+              <div class="char-header">
+                <div>
+                  <h3>Кэтрин Лицкая</h3>
+                  <p class="char-quote">«Все хорошо?»</p>
+                </div>
+                <div class="char-meta">
+                  <span>20 лет</span>
+                  <span>Рост: 159 см</span>
+                </div>
+              </div>
 
-  .characters {
-    grid-template-columns: 1fr;
-  }
+              <p class="char-bio">
+                Преданная подруга из того же детдома. Обеспечена, бескорыстна, тайно влюблена в Феликса
+                и проявляет материнскую заботу к строптивой Фелиции.
+              </p>
 
-  .hero-panel {
-    min-height: 520px;
-  }
-}
+              <button class="btn btn-secondary" data-character="kathrine">Перейти на профиль</button>
+            </article>
+          </div>
+        </div>
+      </section>
 
-@media (max-width: 640px) {
-  .main-container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+      <section class="chars-section section" id="supporting">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Окружение</p>
+            <h2>Другие персонажи</h2>
+          </div>
 
-  .hero-panel {
-    padding: 20px 18px 26px;
-  }
+          <div class="crowd-grid">
+            <article class="crowd-card">
+              <div class="crowd-name">Белла «Кошечка»</div>
+              <div class="crowd-meta">18 лет | 173 см</div>
+              <button class="btn btn-secondary" data-character="bella">Перейти на профиль</button>
+            </article>
 
-  .story-block {
-    padding: 24px 18px;
-  }
+            <article class="crowd-card">
+              <div class="crowd-name">Дерик «Чмырь»</div>
+              <div class="crowd-meta">Нрлщик | 191 см</div>
+              <button class="btn btn-secondary" data-character="derik">Перейти на профиль</button>
+            </article>
 
-  .hero-title {
-    font-size: 3.4rem;
-  }
+            <article class="crowd-card">
+              <div class="crowd-name">Саймон Грей</div>
+              <div class="crowd-meta">Хакер | 187 см</div>
+              <button class="btn btn-secondary" data-character="simon">Перейти на профиль</button>
+            </article>
 
-  .signature {
-    min-height: 180px;
-    font-size: 4.4rem;
-  }
-}
+            <article class="crowd-card">
+              <div class="crowd-name">Кики</div>
+              <div class="crowd-meta">Рост 163 см</div>
+              <button class="btn btn-secondary" data-character="kiki">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Ведьма</div>
+              <div class="crowd-meta">Рост 170 см</div>
+              <button class="btn btn-secondary" data-character="witch">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Лолита</div>
+              <div class="crowd-meta">Рост 166 см</div>
+              <button class="btn btn-secondary" data-character="lolita">Перейти на профиль</button>
+            </article>
+
+            <article class="crowd-card">
+              <div class="crowd-name">Комар</div>
+              <div class="crowd-meta">Рост 185 см</div>
+              <button class="btn btn-secondary" data-character="komar">Перейти на профиль</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section section" id="faq">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Информация</p>
+            <h2>О игре</h2>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-card">
+              <h3>Жанр</h3>
+              <p>Интерактивная психологическая драма в шоколадно-багровых тонах</p>
+            </div>
+            <div class="faq-card">
+              <h3>Разработчик</h3>
+              <p>Lonely Souls Studio</p>
+            </div>
+            <div class="faq-card">
+              <h3>Платформы</h3>
+              <p>ПК, мобильные устройства</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© 2026 Lonely Souls Studio. По мотивам хроники Хиллсов.</p>
+        </div>
+      </footer>
+    </main>
+
+    <aside class="side-panel side-right">
+      <div class="panel-image panel-3"></div>
+    </aside>
+  </div>
+
+  <div class="wiki-modal" id="wikiModal">
+    <div class="wiki-modal-content">
+      <button class="wiki-close" onclick="closeWiki()">&times;</button>
+      <div class="wiki-container" id="wikiContainer">
+        <h3 id="wikiTitle">Профиль персонажа</h3>
+        <p id="wikiText">Здесь будет краткая биография и описание мотивации персонажа.</p>
+        <div class="wiki-badges">
+          <span id="badge1">Возраст</span>
+          <span id="badge2">Рост</span>
+          <span id="badge3">Мотив</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
